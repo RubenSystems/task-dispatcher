@@ -18,8 +18,8 @@ for (int i = 0; i < sizeof(x) / sizeof(int); i ++) {
 }
 ```
 
-##### Clear queue
-This should only be done when program execution is complete. This can cause nasty issues if it is not called before the program halts. 
+##### Clear ("join") queue
+Joining should be done when program execution is complete. This prevents nasty issues when the program halts. If the queue is operating forever, such as on a webserver, joining is not required. 
 
 ```c
 join(&queue);
