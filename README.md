@@ -1,5 +1,11 @@
 # Task Dispatcher
-Asynchronous execution of tasks and thread reuse for minimal runtime overhead. 
+Asynchronous execution of tasks and thread reuse for minimal runtime overhead in the creation of threads.
+
+This is useful for:
+- Generic thread management: Like the pthread API, this accepts any ```c void *``` parameter function. The library manages the creation and joining of threads. 
+- Web servers: This can be used to asynchronously manage multiple clients.
+
+or anywhere else a thread pool is used. 
 
 
 # Instructions 
